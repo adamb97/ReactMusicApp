@@ -1,15 +1,15 @@
 import React from 'react'
-
-function player() {
+import PlayerDetails from './PlayerDetails'
+function Player(props) {
     return (
         <div className="player">
             <audio></audio>
             <h4>Playing now</h4>
-            {/* Details */}
+            <PlayerDetails song={props.song} />
             {/* {Controls} */}
-            <p><strong>Next Up: </strong>Song 2</p>
+            <p><strong>Next Up: </strong>{props.nextSong.title} by {props.nextSong.Artist}</p>
         </div>
     )
 }
 
-export default player
+export default Player
